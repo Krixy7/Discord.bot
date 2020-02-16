@@ -1,5 +1,6 @@
 const { Client, RichEmbed, Collection } = require('discord.js');
 const Discord = require('discord.js');
+const commando = require('discord.js-commando')
 const client = new Client();
 const math = require('mathjs');
 const http = require('http')
@@ -156,8 +157,9 @@ client.on('message', message => {
   
 if (message.content === '!SzabályzatEra') {
   const embedEra = new RichEmbed()
-  .setTitle('__***Szabályzat***__')
-  .setColor(0xFF0000);
+  .setTitle('__**Szabályzat**__')
+  .setColor(0xFF0000)
+  .setDescription('ilyenkor mivan')
 
 
 
