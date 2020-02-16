@@ -154,9 +154,9 @@ client.on('message', message => {
     message.channel.send(resp.toString())
   }
   
-if (message.content === '!Szabályzat') {
+if (message.content === '!SzabályzatEra') {
   const embedEra = new RichEmbed()
-  .setTitle('1.Test')
+  .setTitle('__***Szabályzat***__')
   .setColor(0xFF0000);
 
 
