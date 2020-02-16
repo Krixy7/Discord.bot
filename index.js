@@ -2,14 +2,21 @@ const { Client, RichEmbed, Collection } = require('discord.js');
 const Discord = require('discord.js');
 const client = new Client();
 const math = require('mathjs');
+const http = require('http')
 
 const dotenv = require('dotenv');
 dotenv.config();
 
 const token = process.env.BOT_TOKEN;
-console.log(token)
+
 
 client.login(token);
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.write('Hello World!');
+  res.end();
+}).listen(process.env.PORT || 6000);
 
 function statisztika() {
   let myGuild = client.guilds.get('676410094715535401')
