@@ -153,6 +153,17 @@ client.on('message', message => {
     }
     message.channel.send(resp.toString())
   }
+  
+if (message.content === '!Szabályzat') {
+  const embedEra = new RichEmbed()
+  .setTitle('1.Test')
+  .setColor(0xFF0000);
+
+
+
+
+message.channel.send(embedEra);
+  }
 })
 
 client.on('guildMemberAdd', member => {
